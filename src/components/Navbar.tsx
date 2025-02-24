@@ -91,13 +91,16 @@ const Navbar: React.FC = () => {
       <div className="mx-auto flex flex-wrap items-center justify-center bg-[#72BAE8] py-2">
         <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm">
           <div className="flex items-center gap-3 sm:pe-10">
-            <a href="#" className="hover:text-white cursor-pointer font-medium">
+            <a
+              href="#"
+              className="hover:text-white cursor-pointer font-medium "
+            >
               Tienda Oficial "DK" Store
             </a>
           </div>
 
           {/* Contenedor del carrusel */}
-          <div className="relative w-full sm:w-[400px] overflow-hidden">
+          <div className="relative sm:w-full w-[400px] overflow-hidden">
             <div className="flex min-w-max animate-scroll gap-4 scrolling">
               {/* Logos */}
               <a
@@ -257,7 +260,7 @@ const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-end">
             {/* Logo */}
-            <div className="py-2 sm:py-4 absolute left-2/4 top-1 sm:left-16">
+            <div className="py-2 sm:py-4 absolute left-2/4 top-1 sm:left-16 transform -translate-x-2/4">
               <a href="/">
                 <img
                   src={decano}
@@ -272,7 +275,7 @@ const Navbar: React.FC = () => {
               className="lg:hidden text-white py-2 pe-2 "
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <Menu size={26} strokeWidth={3}/>
+              <Menu size={26} strokeWidth={3} />
             </button>
 
             {/* Navigation Links - Desktop */}
@@ -419,6 +422,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
+      <div className="w-full h-[3px] bg-gradient-to-r to-[#72BAE8] from-white"></div>
     </div>
   );
 };

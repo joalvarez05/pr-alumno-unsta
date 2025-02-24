@@ -1,33 +1,25 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CarouselItem {
   title: string;
   description: string;
   imageUrl: string;
+  alt: string;
 }
 
 const carouselItems: CarouselItem[] = [
   {
-    title: "Digital Innovation",
-    description:
-      "Transform your business with cutting-edge digital solutions that drive growth and innovation. Our expertise helps you stay ahead in today's competitive landscape.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800&h=600",
+    title: '"No caería en jugadores puntuales"',
+    description: "",
+    imageUrl: "src/assets/lucas-pusineri.jpg",
+    alt: "lucas pusineri",
   },
   {
-    title: "Creative Design",
-    description:
-      "Bring your vision to life with our creative design services. We combine aesthetics with functionality to create memorable brand experiences.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800&h=600",
-  },
-  {
-    title: "Smart Solutions",
-    description:
-      "Leverage intelligent solutions that streamline your operations and enhance efficiency. Our smart technologies make your business work smarter, not harder.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800&h=600",
+    title: "Comenzar la semana cabeza arriba",
+    description: "",
+    imageUrl: "src/assets/entrenamiento.webp",
+    alt: "lucas pusineri",
   },
 ];
 
@@ -46,16 +38,8 @@ const Carousel: React.FC = () => {
     );
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [nextSlide]);
-
   return (
-    <div className="relative w-full max-w-6xl mx-auto overflow-hidden">
+    <div className="relative w-full mx-auto overflow-hidden">
       <div
         className="flex transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -63,23 +47,20 @@ const Carousel: React.FC = () => {
         {carouselItems.map((item, index) => (
           <div
             key={index}
-            className="w-full flex-shrink-0 flex items-center p-8 bg-white"
+            className="w-full flex-shrink-0 flex items-center bg-white relative"
           >
             <div className="flex flex-col md:flex-row items-center gap-8 w-full">
-              <div className="w-full md:w-1/2 space-y-4 p-6">
-                <h2 className="text-3xl font-bold text-gray-800">
-                  {item.title}
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-              <div className="w-full md:w-1/2">
-                <img
-                  src={item.imageUrl}
-                  alt={item.title}
-                  className="w-full h-[400px] object-cover rounded-lg shadow-lg"
-                />
+              <div className="w-full relative">
+                <a href="#">
+                  <h2 className="text-3xl md:text-5xl z-10 text-center font-bold absolute top-3/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4 text-white md:underline sm:no-underline">
+                    {item.title}
+                  </h2>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.title}
+                    className="w-full h-[400px] sm:h-[500px] object-cover object-top brightness-75"
+                  />
+                </a>
               </div>
             </div>
           </div>
