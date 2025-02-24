@@ -260,7 +260,7 @@ const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-end">
             {/* Logo */}
-            <div className="py-2 sm:py-4 absolute left-2/4 top-1 sm:left-16 transform -translate-x-2/4">
+            <div className="py-2 sm:py-4 absolute left-2/4 top-1 lg:left-16 transform -translate-x-2/4">
               <a href="/">
                 <img
                   src={decano}
@@ -307,17 +307,17 @@ const Navbar: React.FC = () => {
                     }`}
                   >
                     {items.map((item, index) => (
-                      <div key={index} className="relative group/item">
+                      <div key={index} className="relative group/item ">
                         {typeof item === "string" ? (
                           <a
                             href="#"
-                            className="block px-4 py-2 hover:bg-gray-100 transition-colors"
+                            className="block px-4 py-2 hover:text-[#52bdff] transition-colors"
                           >
                             {item}
                           </a>
                         ) : (
                           <div>
-                            <button className="w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors flex items-center justify-between">
+                            <button className="w-full text-left px-4 py-2 hover:bg-gray-100 hover:text-[#52bdff] transition-colors flex items-center justify-between">
                               {item.name}
                               <ChevronDown
                                 size={16}
@@ -329,7 +329,7 @@ const Navbar: React.FC = () => {
                                 <a
                                   key={subIndex}
                                   href="#"
-                                  className="block px-4 py-2 hover:bg-gray-100 transition-colors"
+                                  className="block px-4 py-2 hover:bg-gray-100 hover:text-[#52bdff] hover:rounded-lg transition-colors"
                                 >
                                   {subItem}
                                 </a>
