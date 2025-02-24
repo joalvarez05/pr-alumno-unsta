@@ -90,8 +90,8 @@ const Navbar: React.FC = () => {
     <div>
       <div className="mx-auto flex flex-wrap items-center justify-center bg-[#72BAE8] py-2">
         <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm">
-          <div className="flex items-center gap-3 pe-10">
-            <a href="#" className="hover:text-white cursor-pointer">
+          <div className="flex items-center gap-3 sm:pe-10">
+            <a href="#" className="hover:text-white cursor-pointer font-medium">
               Tienda Oficial "DK" Store
             </a>
           </div>
@@ -269,10 +269,10 @@ const Navbar: React.FC = () => {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden text-white p-2 "
+              className="lg:hidden text-white py-3 pe-2 "
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <Menu size={24} />
+              <Menu size={26} strokeWidth={3}/>
             </button>
 
             {/* Navigation Links - Desktop */}
@@ -285,7 +285,7 @@ const Navbar: React.FC = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className="flex items-center space-x-1 text-white hover:text-gray-300 py-3"
+                    className="flex items-center space-x-1 font-semibold text-white hover:text-gray-300 py-3"
                     onClick={() => toggleDropdown(key)}
                   >
                     <span className="capitalize">{key}</span>
