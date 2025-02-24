@@ -12,13 +12,13 @@ const carouselItems: CarouselItem[] = [
   {
     title: '"No caería en jugadores puntuales"',
     description: "",
-    imageUrl: "../assets/lucas-pusineri.jpg",
+    imageUrl: "./src/assets/lucas-pusineri.jpg",
     alt: "lucas pusineri",
   },
   {
     title: "Comenzar la semana cabeza arriba",
     description: "",
-    imageUrl: "../assets/entrenamiento.webp",
+    imageUrl: "./src/assets/entrenamiento.webp",
     alt: "lucas pusineri",
   },
 ];
