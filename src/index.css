@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrolling {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 12s linear infinite;
+}
+.scrolling:hover,
+.scrolling:active {
+  animation-play-state: paused;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logos img {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
