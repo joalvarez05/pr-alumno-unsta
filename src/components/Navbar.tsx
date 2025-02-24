@@ -257,19 +257,19 @@ const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-end">
             {/* Logo */}
-            <div className="py-2 sm:py-4 absolute left-16 top-1">
+            <div className="py-2 sm:py-4 absolute left-2/4 top-1 sm:left-16">
               <a href="/">
                 <img
                   src={decano}
                   alt="logo Atlético Tucumán"
-                  className="h-10 md:h-14 lg:h-16"
+                  className="h-10 md:h-14 lg:h-16 "
                 />
               </a>
             </div>
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden text-white py-3 pe-2 "
+              className="lg:hidden text-white py-2 pe-2 "
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <Menu size={26} strokeWidth={3}/>
