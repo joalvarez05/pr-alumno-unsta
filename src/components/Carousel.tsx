@@ -52,7 +52,7 @@ const Carousel: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center gap-8 w-full">
               <div className="w-full relative">
                 <a href="#">
-                  <h2 className="text-3xl md:text-5xl z-10 text-center font-bold absolute top-3/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4 text-white md:underline sm:no-underline">
+                  <h2 className="text-3xl md:text-5xl hover:text-gray-100 z-10 text-center font-bold absolute top-3/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4 text-white md:underline sm:no-underline">
                     {item.title}
                   </h2>
                   <img
