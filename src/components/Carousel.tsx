@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import lucasPusineri from "../assets/lucas-pusineri.jpg";
+import entrenamiento from "../assets/entrenamiento.webp";
 interface CarouselItem {
   title: string;
   description: string;
@@ -12,13 +13,13 @@ const carouselItems: CarouselItem[] = [
   {
     title: '"No caería en jugadores puntuales"',
     description: "",
-    imageUrl: "../assets/lucas-pusineri.jpg",
+    imageUrl: lucasPusineri,
     alt: "lucas pusineri",
   },
   {
     title: "Comenzar la semana cabeza arriba",
     description: "",
-    imageUrl: "../assets/entrenamiento.webp",
+    imageUrl: entrenamiento,
     alt: "lucas pusineri",
   },
 ];
