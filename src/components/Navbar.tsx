@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Contenedor del carrusel */}
-          <div className="relative w-[300px] sm:w-[400px] overflow-hidden">
+          <div className="relative w-full sm:w-[400px] overflow-hidden">
             <div className="flex min-w-max animate-scroll gap-4 scrolling">
               {/* Logos */}
               <a
